@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1 id="profile-name">Your Name</h1>
+      <p id="profile-title">Full-Stack Developer</p>
+      <p id="profile-summary">
+        I build simple, responsive portfolio websites and backend services with Node.js and Express.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Skills</h2>
+      <div id="skills" class="chips"></div>
+    </section>
+
+    <section class="project-form">
+      <h2>Manage Projects</h2>
+      <form id="project-form">
+        <input type="hidden" id="project-id" />
+        <div class="field-row">
+          <label for="project-title">Title</label>
+          <input id="project-title" name="title" type="text" placeholder="Project title" required />
+        </div>
+        <div class="field-row">
+          <label for="project-description">Description</label>
+          <textarea id="project-description" name="description" rows="4" placeholder="Brief project description" required></textarea>
+        </div>
+        <div class="field-grid">
+          <div class="field-row">
+            <label for="project-tags">Tags</label>
+            <input id="project-tags" name="tags" type="text" placeholder="HTML, CSS, JavaScript" required />
+          </div>
+          <div class="field-row">
+            <label for="project-url">Project URL</label>
+            <input id="project-url" name="url" type="url" placeholder="https://example.com" />
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="save-project" class="button">Add project</button>
+          <button type="button" id="cancel-edit" class="button secondary hidden">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div id="projects" class="grid"></div>
+    </section>
+
+    <section class="contact-card">
+      <h2>Contact</h2>
+      <p>Want to work together? Send me an email at <a href="mailto:hello@example.com">hello@example.com</a>.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
